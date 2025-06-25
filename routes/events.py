@@ -17,7 +17,8 @@ event_router = APIRouter(tags=["Event"])
 # pathlib 모듈의 Path 클래스를 FilePath 이름으로 사용
 from pathlib import Path as FilePath
 #FILE_DIR = FilePath("C:/temp/uploads")
-FILE_DIR = FilePath("C:/temp/uploads")
+# FILE_DIR = FilePath("C:/temp/uploads")
+FILE_DIR = FilePath("/app/uploads")
 FILE_DIR.mkdir(exist_ok=True)
 
 
@@ -25,8 +26,8 @@ FILE_DIR.mkdir(exist_ok=True)
 AWS_ACCESS_KEY_ID = settings.AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY = settings.AWS_SECRET_ACCESS_KEY
 
-S3_BUCKET = os.getenv("S3_BUCKET_NAME", "event-bucket-11")
-S3_REGION = os.getenv("AWS_REGION", "ap-northeast-2")  # 기본은 서울
+S3_BUCKET = os.getenv("S3_BUCKET_NAME", "mini3bucket-crcl")
+S3_REGION = os.getenv("AWS_REGION", "ap-northeast-2")
 
 s3_client = boto3.client(
     "s3",
