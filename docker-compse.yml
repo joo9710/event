@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build: .  # 현재 디렉토리에 있는 Dockerfile로 이미지 빌드
+    container_name: fastapi_app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env  # EC2에 있는 .env 파일 사용
+    restart: unless-stopped
