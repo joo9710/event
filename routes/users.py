@@ -55,7 +55,7 @@ async def sign_in(data: OAuth2PasswordRequestForm = Depends(), session = Depends
             detail="패스워드가 일치하지 않습니다.")
     
     return {
-        "message": "로그인에 성공했습니다. CICD",
+        "message": "로그인에 성공했습니다. CICD test",
         "username": user.username, 
         "access_token": create_jwt_token(user.email, user.id)
     }
