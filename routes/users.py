@@ -145,5 +145,5 @@ async def naver_callback(
     token = create_jwt_token(user.email, user.id)
 
     # 클라이언트 앱으로 리디렉트 (토큰과 유저명 포함)
-    redirect_url = f"http://13.124.75.129/:80/naver/callback?token={token}&username={user.username}"
+    redirect_url = f"http://13.124.75.129/naver/callback?token={token}&username={user.username}"
     return RedirectResponse(url=redirect_url)
