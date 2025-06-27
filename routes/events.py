@@ -19,7 +19,7 @@ from pathlib import Path as FilePath
 #FILE_DIR = FilePath("C:/temp/uploads")
 # FILE_DIR = FilePath("C:/temp/uploads"1)
 FILE_DIR = FilePath("/app/uploads")
-FILE_DIR.mkdir(exist_ok=True)
+# FILE_DIR.mkdir(exist_ok=True)
 
 
 # S3 설정
