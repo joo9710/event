@@ -14,7 +14,7 @@ event_router = APIRouter(tags=["Event"])
 
 
 
-# pathlib 모듈의 Path 클래스를 FilePath 이름으로 사용
+# pathlib 모듈의 Path 클래스를 FilePath 이름으로 사용 c
 from pathlib import Path as FilePath
 #FILE_DIR = FilePath("C:/temp/uploads"123)
 # FILE_DIR = FilePath("C:/temp/uploads")
