@@ -9,7 +9,7 @@ if TYPE_CHECKING:
 class User(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     email: EmailStr
-    password: str
+    password: Optional[str] = None
     username: str
     events: Optional[List["Event"]] = Relationship(back_populates="user")
 

@@ -6,7 +6,10 @@ class Settings(BaseSettings):
     DATABASE_URL: Optional[str] = None
     SECRET_KEY: Optional[str] = None
     AWS_ACCESS_KEY_ID: Optional[str] = None
-    AWS_SECRET_ACCESS_KEY: Optional[str] = None    
+    AWS_SECRET_ACCESS_KEY: Optional[str] = None
+    naver_client_id: str
+    naver_client_secret: str
+    naver_redirect_uri: str    
     print(SECRET_KEY)
     
     class Config:
